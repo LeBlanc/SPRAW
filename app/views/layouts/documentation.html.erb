@@ -1,0 +1,25 @@
+<% inside_layout 'application' do -%>
+<%= stylesheet_link_tag '/stylesheets/documentation.css' %>
+
+<div id="documentationsidebar">
+<br />
+<b id="documentationTOCtitle"> Documentation <br />
+Table of Contents: </b>
+<ul>
+<li><%= link_to "index", :controller => "documentation", :action => "index" %> </li>
+<li><%= link_to "Javascript tutorial", :controller => "documentation", :action => "jstutorial" %></li>
+<li><%= link_to "HTTP tutorial", :controller => "documentation", :action => "httptutorial" %></li>
+<li><%= link_to "data types", :controller => "documentation", :action => "datatypes" %></li>
+</ul>
+<br />
+<br />
+
+
+
+</div>
+<div id="documentationcontentbox">
+<%= yield %>
+</div>
+
+
+<% end %>

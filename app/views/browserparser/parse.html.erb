@@ -1,0 +1,33 @@
+<%= stylesheet_link_tag '/stylesheets/browserparser.css' %>
+<%= javascript_include_tag "/javascripts/nlp-api-0.1.js" %>
+<%= javascript_include_tag "/javascripts/browserparse.js" %>
+
+
+
+<div id="browserparsetitletext">
+<h2>Browser Parsing: an example of how to use the API</h2>
+
+This page is a demonstration of how to use the API to parse text in the browser. The javascript for this page is located <a href="/javascripts/browserparse.js" >here</a>, and the parser api javascript is located <a href="/javascripts/nlp-api-0.1.js">here</a>. With this page you can get an idea of the what output you can get from the Stanford Parser. For more information about how to use the API please see the <%= link_to "documentation", :controller => "Pages", :action => "documentation" %>.
+
+
+</div>
+&nbsp;
+<br />
+<div id="inputcontentbox">
+<h3> input your text here: </h3><div id="inputerror" class="errormsg"></div>
+<br />
+<textarea id="browserparseinputfield" contentEditable></textarea>
+<br />
+<br />
+<div id="browserparsesubmitbutton" onclick="browserparse()" > click here to parse! </div>
+<br />
+<br />
+
+</div>
+<div id="outputcontentbox">
+<h3> see your output here: </h3> <br />
+<img id="loading" src="/images/loading.gif" class="noshow" width="50px" heigh="50px;" />
+<div id="stringoutput"> </div>
+<pre id="JSONoutput"> </pre>
+
+</div>

@@ -1,0 +1,11 @@
+<h2> How to use the Stanford Natural Language Parser on your website:</h2> (v0.1)
+The API I have developed for the Stanford Parser currently supports JSON-P. The following is a series of steps
+showing you how to parse sentences within javascript. 
+<br /><br />
+<b>Step 1:</b> <a href="/javascripts/nlp-api-0.1.js">download this simple javascript JSON-P API</a>
+<br /><br/>
+<b>Step 2:</b> put the nlp-api-<i>[version#]</i>.js file in the folder where you keep your other javascript files / HTML files
+<br /><br/>
+<b>Step 3:</b> include the following code in the head section of your HTML document &lt;script type=&quot;text/javascript&quot; src=&quot;nlp-api-0.1.js&quot;&gt;&lt;/script&gt;
+<br /><br/>
+<b>Step 4:</b> you can now use the nlp.getParse(text, callback); function in your javascript. 'text' should be whatever text you want to parse. callback should be a function that you want to fire once the parsing is complete. for example: text could be "go to the store" while callback could be function(data) { alert(data.words[0].value); } in this example the callback function will be called and the data object passed to the callback function will be a JSON object representing your parsed text

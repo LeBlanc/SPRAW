@@ -1,0 +1,32 @@
+#documentationsidebar
+{
+border-right-style:solid;
+border-right-color:black;
+border-right-width:2px;
+height:auto;
+min-height:480px;
+width:210px;
+float:left;
+}
+#documentationcontentbox
+{
+float:left;
+min-height:480px;
+width:650px;
+margin-left:25px;
+display:inline;
+}
+#documentationTOCtitle
+{
+font-style:bold;
+font-size:20px;
+}
+ul
+{
+list-style:square;
+}
+ul a{font-size:20px}
+ul a:link {color:#595454; text-decoration:none;}      /* unvisited link */
+ul a:visited {color:#595454; text-decoration:none;}  /* visited link */
+ul a:hover {color:#595454; text-decoration:underline;}  /* mouse over link */
+ul a:active {color:#595454; text-decoration:underline; }  /* selected link */

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title> Natural Language Parsing
+</title>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17602604-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<%= stylesheet_link_tag '/stylesheets/application.css' %>
+</head>
+
+<body><div id="bodybox">
+<div id="topbox">&nbsp;
+<div id="titlebox">Natural-language<wordtag>/JJ</wordtag> Parsing<wordtag>/VBG</wordtag> For<wordtag>/IN</wordtag> The<wordtag>/DT</wordtag> Web<wordtag>/NN</wordtag>  </div>&nbsp;
+<div id="navigationbox"> <div id="navigationbar">
+
+<div class="menubox"><%= link_to "about", :controller => "Pages", :action => "about" %></div>
+<div class="menubox"><%= link_to "parse", :controller => "browserparser", :action => "parse" %></div>
+<div class="menubox"><a href="http://blog.naturalparsing.com">blog </a></div>
+<div class="menubox"><%= link_to "documentation", :controller => "documentation", :action => "index" %></div>
+
+ </div> 
+
+ </div>
+&nbsp;
+</div>
+
+<div id="contentbox"> 
+
+
+<%= yield %>
+<hr class="bottomcatcher">
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+SPRAW
+
+S.Pr.A.W. = Stanford Parser API for the Web
+
+This is the web API for the Stanford Parser that I wrote. It is a JRuby on Rails wrapper around the Java, open-source Stanford Natural Language Parser. This API allows you to use the functionality of the Stanford Parser in your web-site's javascript (using JSON-P). 
+
+Stanford Parser: http://nlp.stanford.edu/software/lex-parser.shtml
+
+The API in action: http://nlp.naturalparsing.com
+
+I built this API in order to learn more about the Stanford Parser and to teach myself more web development. Any suggesions on how to improve my code would be greatly appreciated.
+
+Andrew LeBlanc
+andrew@naturalparsing.com
