@@ -12,3 +12,5 @@ I built this API in order to learn more about the Stanford Parser and to teach m
 
 Andrew LeBlanc
 andrew@naturalparsing.com
+
+NOTE: I did not include the database.yml file (I don't want people looking at my mysql passwords), make sure you include your own (you won't need to do any db:migrates because this app does not use the database). Also not included is the vendor/rails folder because it is large and there is not reason to waste bandwith transfering it. make sure you copy it from another rails project. I am using rails 2.3.8
