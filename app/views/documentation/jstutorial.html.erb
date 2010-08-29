@@ -9,3 +9,5 @@ showing you how to parse sentences within javascript.
 <b>Step 3:</b> include the following code in the head section of your HTML document &lt;script type=&quot;text/javascript&quot; src=&quot;nlp-api-0.1.js&quot;&gt;&lt;/script&gt;
 <br /><br/>
 <b>Step 4:</b> you can now use the nlp.getParse(text, callback); function in your javascript. 'text' should be whatever text you want to parse. callback should be a function that you want to fire once the parsing is complete. for example: text could be "go to the store" while callback could be function(data) { alert(data.words[0].value); } in this example the callback function will be called and the data object passed to the callback function will be a JSON object representing your parsed text
+<br/><br />
+<b>Also:</b> If you want to get the parsed sentence returned as a tree object then you can use the nlp.getParsedTree function in the same manner as the nlp.getParse function

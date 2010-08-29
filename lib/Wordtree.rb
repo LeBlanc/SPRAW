@@ -4,10 +4,16 @@ class Wordtree
 	
 	def initialize(stanfordtree, id)
 		@id = id
-		@value = stanfordtree.value()
-		@children = Array.new
+
 		numchildren = stanfordtree.numChildren()
 		for i in 0..(numchildren - 1)
+			puts stanfordtree.children[i]
+		end
+		@value = stanfordtree.value()
+		@children = Array.new
+		
+		for i in 0..(numchildren - 1)
+			#puts 'LOOP'
 			stanfordchild = stanfordtree.getChild(i)
 			@children[i] = Wordtree.new(stanfordchild, id + 1)
 		end

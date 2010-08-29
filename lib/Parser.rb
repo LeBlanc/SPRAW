@@ -5,6 +5,7 @@ class Parser
     include_class 'edu.stanford.nlp.trees.Tree'
     require 'Word.rb'
     require 'Sentence.rb'
+    require 'Wordtree.rb'
 
 
     def initialize #creates a new parser
@@ -30,6 +31,17 @@ class Parser
     def getparsedstring(input) #returns a string representing a parsed sentence
     	s = getparsedsentence(input) 
     	s.to_s
+    end
+
+    def gettree(input)
+    	@parser.parse(input) #loads the input into the parser
+    	@tree = @parser.getBestParse #gets the statistically best parse from the parser
+    	@wordtree = Wordtree.new(@tree, 0)
+    end
+
+    def t(input)
+    	@parser.parse(input) #loads the input into the parser
+    	@tree = @parser.getBestParse #gets the statistically best parse from the parser
     end
 
     

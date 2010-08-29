@@ -18,3 +18,22 @@ Parsed text is returned in the callback function as a JSON object. The text "go 
 <br /> <br />
 The JSON object contains an array of words called 'words'. Each word in the array has a value, which represents the text of the word (ie 'go' has a value of 'go'), an id which represents the position in the array of the word (first word is 0, second word is 1, etc), and a tag which represents what part of speech the object is (VB is verb). The tag set used is the <a href="http://www.comp.leeds.ac.uk/amalgam/tagsets/upenn.html">UPenn Tree Bank Tag Set. </a>
 <br />
+<br />
+Alternatively, by using the nlp.getParsedTree function you can have your parsed sentence returned as a Stanford Parser Tree object. A Tree object is a nodal representation of the structure of the sentence. The text 'go to the store' would be returned as
+<br /><br />
+
+<pre>
+{ "value":"ROOT", "id":"0", "children": [
+  { "value":"S", "id":"1", "children": [
+    { "value":"VP", "id":"2", "children": [
+      { "value":"VB", "id":"3", "children": [
+        { "value":"go", "id":"4", "children": []}]}
+      { "value":"PP", "id":"3", "children": [
+        { "value":"TO", "id":"4", "children": [
+          { "value":"to", "id":"5", "children": []}]}
+        { "value":"NP", "id":"4", "children": [
+          { "value":"DT", "id":"5", "children": [
+            { "value":"the", "id":"6", "children": []}]}
+          { "value":"NN", "id":"5", "children": [
+            { "value":"store", "id":"6", "children": []}]}]}]}]}]}]}
+</pre>

@@ -19,7 +19,7 @@ if (inputtext.length >250)
 else
 {
 	document.getElementById("inputerror").innerHTML = "";
-	if (nlp.getParse(inputtext, function(data) {document.getElementById("loading").setAttribute("class", "noshow"); document.getElementById("stringoutput").innerHTML = "<u>string output:</u> <br />" + nlp.JSONtoString(data); 	document.getElementById("JSONoutput").innerHTML = "<u>JSON output:</u> <br />" + formatData(data);  } ) )
+	if (nlp.getParse(inputtext, function(data) {document.getElementById("loading").setAttribute("class", "noshow"); document.getElementById("stringoutput").innerHTML = "<u>string output:</u> <br />" + nlp.JSONtoString(data); 	document.getElementById("JSONoutput").innerHTML = "<u>JSON output:</u> <br />" + formatData(data);  } ) && nlp.getParsedTree(inputtext, function(tree) { document.getElementById("treeoutput").innerHTML = "<u>Tree output:</u> <br />" + formatTree(tree, "", 0);  }) )
 	{
 	document.getElementById("loading").setAttribute("class", "yesshow");
 	}
@@ -41,4 +41,34 @@ else
 	output = output + "   ]\n}";
 	return output;
 }
+}
+
+function formatTree(data, output, index)
+{	
+	output += "\n";
+	var y = 0;
+	while (y < index)
+	{ output += "  "; y += 1;}	
+		
+	output += "{ \"value\":\"" + data.value + "\", \"id\":\"" + data.id + "\"";
+	output += ", \"children\": [";
+	if (data.children.length > 0)
+	{	
+		
+		
+		
+		index += 1;
+		
+		var x = 0;
+		while (x < data.children.length)
+		{
+			
+			output = formatTree(data.children[x], output, index);
+			x += 1;
+		}
+		
+	}
+	output += "]";
+	output += "}";
+	return output;
 }

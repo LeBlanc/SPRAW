@@ -7,7 +7,7 @@
 <div id="browserparsetitletext">
 <h2>Browser Parsing: an example of how to use the API</h2>
 
-This page is a demonstration of how to use the API to parse text in the browser. The javascript for this page is located <a href="/javascripts/browserparse.js" >here</a>, and the parser api javascript is located <a href="/javascripts/nlp-api-0.1.js">here</a>. With this page you can get an idea of the what output you can get from the Stanford Parser. For more information about how to use the API please see the <%= link_to "documentation", :controller => "Pages", :action => "documentation" %>.
+This page is a demonstration of how to use the API to parse text in the browser. The javascript for this page is located <a href="/javascripts/browserparse.js" >here</a>, and the parser api javascript is located <a href="/javascripts/nlp-api-0.1.js">here</a>. With this page you can get an idea of the what output you can get from the Stanford Parser. For more information about how to use the API please see the <%= link_to "documentation", :controller => "Pages", :action => "documentation" %>. The reference for the word tags after each word can be found at the <a href="http://www.comp.leeds.ac.uk/amalgam/tagsets/upenn.html">UPenn Tree Bank Tag Set. </a> To learn about what this site is, read <a href="http://en.wikipedia.org/wiki/Natural_language_processing">this wikipedia article</a>, and visit the <a href="http://nlp.stanford.edu/software/lex-parser.shtml">Stanford Parser website</a>.
 
 
 </div>
@@ -29,5 +29,6 @@ This page is a demonstration of how to use the API to parse text in the browser.
 <img id="loading" src="/images/loading.gif" class="noshow" width="50px" heigh="50px;" />
 <div id="stringoutput"> </div>
 <pre id="JSONoutput"> </pre>
+<pre id="treeoutput"> </pre>
 
 </div>
